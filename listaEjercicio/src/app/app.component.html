@@ -1,6 +1,11 @@
-
-<div>TAREAS
-    <input type = "text" placeholder = "Type here" [(ngModel)] = "actividades">
-    <input type="submit" (click)="agregarTarea()">
-
-</div>
+<ul>
+  Lista <br>
+  <br>
+  <input type="text" [(ngModel)]="tarea" />
+  <button (click)="addActivity()">Agregar</button>  
+  <hr>
+  <li *ngFor="let activity of tareas">
+    <span>{{activity}}</span>
+    <button (click)="deleteMe(activity)">Eliminar</button>
+  </li>
+</ul>

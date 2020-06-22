@@ -6,14 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tareas = [];
-  tarea : string;
-  estado: boolean;
-}
+  tareas: string[] = [];
+  tarea: string = "";
+  
+  addActivity(){
 
-// agregarTarea(){
-//   this.tareas.push({
-//     tarea: this.tarea,
-//     estado: this.estado
-//   })
-// }
+    // funcion para agregar cosas al array
+
+    this.tareas.push(this.tarea); 
+  }
+
+  deleteMe(activity:string){
+
+    // filtramos para que nos duelva todos los valores menos el que no queremos
+
+    this.tareas = this.tareas.filter(i => i != activity); 
+    
+  }
+
+}
