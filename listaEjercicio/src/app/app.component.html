@@ -5,7 +5,7 @@
   <button (click)="addActivity()">Agregar</button>  
   <hr>
   <li *ngFor="let activity of tareas">
-    <span>{{activity}}</span>
+    <span>{{(activity) + (fechaFunction()) }}</span>
     <button (click)="deleteMe(activity)">Eliminar</button>
   </li>
 </ul>
